@@ -1,0 +1,39 @@
+<div class="table-container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Título</th>
+        <th scope="col">Contenido</th>
+        <th scope="col">Imagen</th>
+        <th scope="col">Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% result.forEach((post) =>{ %>
+      <tr>
+        <td class="fs-4 align-middle"><b><%= post.titulo %></b></td>
+        <td class="fs-4 align-middle"><%= post.contenido %></td>
+        <td>
+          <img
+            class="card"
+            src="<%= post.urlImagen %>"
+            alt="Descripción de la imagen"
+          />
+        </td>
+        <td class="align-middle">
+          <a href="/editPost/<%= post.id%>" class="btn btn-success">
+            <i class="bx bxs-edit-alt bx-sm"></i>
+          </a>
+          <a
+            href="/deletePost/<%= post.id %>"
+            class="btn btn-danger"
+            onclick="confirmar('<%= post.id%>')"
+          >
+            <i class="bx bxs-trash bx-sm"></i>
+          </a>
+        </td>
+      </tr>
+      <% }) %>
+    </tbody>
+  </table>
+</div>

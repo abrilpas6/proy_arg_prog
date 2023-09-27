@@ -1,16 +1,16 @@
 const { Sequelize } = require("sequelize");
 
-/*const dbName = process.env.DB_NAME;
-const dbUserName = process.env.DB_USERNAME;
-const dbPassword = process.env.DB_PASSWORD;*/
+const dbName = process.env.DB_NAME;
+const dbUserName = process.env.DB_USER;
+const dbPassword = process.env.DB_PASS;
+const dbHost = process.env.DB_HOST;
+const dbDialect = process.env.DB_DIALECT;
 
-const sequelize = new Sequelize("proyecto_arg_programa", "sa", "root", {
-  host: "localhost",
-  dialect: "mssql",
+const sequelize = new Sequelize(dbName, dbUserName, dbPassword, {
+  host: dbHost,
+  dialect: dbDialect,
   dialectOptions: {
-    options: {
-      encrypt: true,
-    },
+    encrypt: true,
   },
 });
 

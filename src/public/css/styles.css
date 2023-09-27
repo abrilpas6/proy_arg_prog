@@ -1,0 +1,121 @@
+/* Estilos CSS para centrar la imagen */
+.centrar-imagen {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh; /* Esto centra la imagen verticalmente en la pantalla */
+}
+.centrar-imagen img {
+  width: 100%; /* La imagen no será más ancha que el contenedor */
+  max-height: 100vh;
+  object-fit: cover;
+}
+.centrar-imagen p {
+  display: block; /* Hace que el párrafo ocupe todo el ancho disponible y aparezca debajo de la imagen */
+  text-align: center; /* Centra el texto horizontalmente */
+}
+
+body {
+  background-color: #333; /* Utiliza el color oscuro de tu elección */
+  color: #fff;
+}
+.btn-white {
+  background-color: #333;
+  color: white;
+}
+.card {
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+.card h2 {
+  text-align: center;
+}
+.form-group {
+  margin-bottom: 15px;
+}
+.form-group label {
+  display: block;
+  font-weight: bold;
+}
+.form-group input[type="text"],
+.form-group input[type="file"] {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+.btn-group {
+  text-align: center;
+}
+.form-group textarea {
+  width: 100%; /* Ajusta el ancho al 100% */
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  resize: vertical;
+}
+.btn-group button {
+  margin-right: 10px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.btn-editar {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-eliminar {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.btn-group button.save {
+  background-color: #4caf50;
+  color: white;
+}
+.btn-group button.cancel {
+  background-color: #f44336;
+  color: white;
+}
+footer {
+  background-color: #251e1e;
+  color: #fff;
+  padding: 10px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0px 0px 10px rgba(145, 140, 140, 0.5);
+}
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  white-space: nowrap; /* Evita que el texto se divida en múltiples líneas */
+  overflow: hidden; /* Oculta el contenido que no cabe */
+  text-overflow: ellipsis; /* Muestra puntos suspensivos (...) cuando el texto se corta */
+  max-width: 200px; /* Ajusta la anchura máxima para el efecto de truncado */
+}
+.table-container {
+  max-height: 850px; /* Establece una altura máxima para el contenedor */
+  overflow-y: auto; /* Agrega una barra de desplazamiento vertical cuando sea necesario */
+}
+
+/* Muestra el contenido completo en un tooltip cuando se pasa el cursor */
